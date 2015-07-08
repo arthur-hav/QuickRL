@@ -45,7 +45,7 @@ void CDisplay::pointer_fx (SDL_Rect rect, SDL_Surface *sprite){
         (SDL_SWSURFACE, 24, 24, 32, rmask, gmask, bmask, amask);
 
 
-    if (old_x > 0 && old_y > 0)
+    if (old_x >= 0 && old_y >= 0)
         SDL_UpdateRect(screen, old_x, old_y, rect.w, rect.h);
 
     SDL_BlitSurface(screen, &rect, save_surface, 0);
